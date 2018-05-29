@@ -1,14 +1,28 @@
-const main = require('./../index');
+let lyric = '';
 
-describe('make a 99 botles of bear\'s song', () => {
-    it('returns Strings as a lyrics sample',function(){
-        let result = main(99)
-        console.log(result)
-        expect(result.trim()).toEqual(sample.trim())
-    })
-});
+const main = function (X) {
+    if (X < 0) {
+        return 'undefine'
+    }
+    while (X > 0) {
+        if (X == 1) {
+            let line = `1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.
+        `
+            lyric = lyric + line;
+            return lyric.trim();
+        }
+        let str = (X == 2) ? 'bottle' : 'bottles';
+        let line = `${X} bottles of beer on the wall, ${X} bottles of beer.\nTake one down and pass it around, ${X-1} ${str} of beer on the wall.\n`
+        lyric = lyric + line;
+        --X;
+    }
+}
+let container = document.getElementById('container')
+let co = document.getElementById('co')
+let lyc = main(99)
 
-let sample = `99 bottles of beer on the wall, 99 bottles of beer.
+
+var sample = `99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 98 bottles of beer on the wall, 98 bottles of beer.
 Take one down and pass it around, 97 bottles of beer on the wall.
@@ -209,3 +223,6 @@ Take one down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.
 `
+container.innerText = sample;
+co.innerText = lyc;
+console.log(sample.trim() == lyc.trim());
