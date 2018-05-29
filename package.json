@@ -1,0 +1,26 @@
+{
+  "name": "99_bottles_of_beer",
+  "version": "1.0.0",
+  "description": "js TDD practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HIKALU-Z/99_bottles_of_beer.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "HIKALU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HIKALU-Z/99_bottles_of_beer/issues"
+  },
+  "homepage": "https://github.com/HIKALU-Z/99_bottles_of_beer#readme",
+  "devDependencies": {
+    "jasmine": "^2.6.0"
+  }
+}
