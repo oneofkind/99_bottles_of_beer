@@ -17,7 +17,7 @@
     No more bottles of beer on the wall, no more bottles of beer.
     Go to the store and buy some more, 99 bottles of beer on the wall.
     
-现在，需要你自己写一个程序生成这份歌词。并且通过测试。
+现在，需要你自己写一个程序生成这份歌词。并且通过测试
 
 ## How to start
 
